@@ -17,3 +17,286 @@ Fonts:
 - Avenir
 
 */
+
+/* Reset default margin and padding, set background and font */
+body {
+  margin: 0;
+  padding: 0;
+  /* Use Avenir for body text, fallback to Arial and sans-serif */
+  font-family: 'Avenir', Arial, sans-serif;
+  /* Set background image from the img folder */
+  background: url('img/Landing Page 1.png') no-repeat center center;
+  background-size: cover; /* Make sure the image covers the whole background */
+  color: white;
+  min-height: 100vh; /* Make sure body takes full height */
+}
+
+/* Wrapper for all content */
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative; /* For positioning logo and footer */
+  padding: 30px;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Main content area */
+.main-content {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;                  /* Less padding for a tighter look */
+  border-radius: 10px;
+  max-width: 400px;
+  margin-top: 60px;               /* More space from the top/logo */
+  margin-left: 0;
+  margin-right: auto;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Main heading style */
+h1 {
+  font-size: 36px;              /* Large and bold for marketing */
+  color: #FFC907;
+  margin-bottom: 12px;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: left;
+  line-height: 1.15;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.18);
+  margin-top: 0;
+}
+
+/* Paragraph style (subheader) */
+p {
+  margin-top: 0;
+  margin-bottom: 18px;
+  line-height: 1.4;
+  font-size: 15px;
+  color: #2E9DF7;
+  font-weight: bold;     /* Make the subheader bold */
+  text-align: left;
+}
+
+/* Call-to-action button style */
+.cta-button {
+  background-color: #FFC907; /* Yellow */
+  color: #2E9DF7; /* Blue text */
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;              /* Make button a block for centering */
+  margin: 0 auto 20px auto;    /* Center horizontally, space below */
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: normal;
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #2E9DF7; /* Blue background on hover */
+  color: #FFC907;            /* Yellow text on hover */
+  transform: scale(1.05);    /* Slightly enlarge on hover */
+}
+
+/* Email form styles */
+.email-form {
+  display: flex;              /* Place input and button side by side */
+  align-items: center;        /* Vertically align input and button */
+  gap: 8px;                   /* Space between input and button */
+}
+
+.email-form input,
+.email-form button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.email-form input {
+  width: 250px; /* Set a normal width for email input */
+  max-width: 100%; /* Make sure it doesn't overflow on small screens */
+  font-size: 16px; /* Keep font readable */
+  padding: 10px;
+  margin-bottom: 0;           /* Remove bottom margin for side-by-side */
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding in width */
+  /* You can add more styles if needed */
+}
+
+.email-form button {
+  background-color: #FFC907; /* Yellow, same as CTA button */
+  color: #2E9DF7;            /* Blue text */
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 18px;         /* Tighter but comfortable padding */
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  display: inline-block;     /* Box hugs the text */
+  width: auto;               /* Only as wide as needed for the text */
+  min-width: 90px;           /* Prevents button from being too small */
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 0;           /* Remove bottom margin for side-by-side */
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.email-form button:hover {
+  background-color: #2E9DF7; /* Blue background on hover */
+  color: #FFC907;            /* Yellow text on hover */
+  transform: scale(1.05);    /* Slightly enlarge on hover */
+}
+
+/* Subtext above the email form to encourage subscribing */
+.subscribe-subtext {
+  color: #FFC907;         /* Yellow text */
+  font-size: 15px;        /* Clear and readable */
+  font-weight: bold;      /* Make it stand out */
+  margin-bottom: 8px;     /* Space below before the form */
+  margin-top: 0;          /* No extra space above */
+  text-align: left;       /* Align with other content */
+}
+
+/* Footer styles */
+.footer {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  text-align: center; /* Center the text and icons */
+  width: 260px; /* Set a fixed width for better centering */
+}
+
+.footer p {
+  font-size: 15px;
+  color: #FFC907;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  letter-spacing: 0.7px;   /* Slightly more for clear, even spacing */
+  word-spacing: 2px;       /* Add space between words for consistency */
+  text-align: center;
+}
+
+/* Social icons row */
+.social-icons {
+  /* Display icons in a row with equal space */
+  display: flex; /* Use flex to align icons in a row */
+  gap: 16px;     /* Add space between each icon */
+  align-items: center; /* Vertically center icons */
+  justify-content: center; /* Center icons horizontally */
+  margin: 0 auto; /* Center the flex container itself */
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15) rotate(-8deg); /* Grow and rotate a bit */
+  box-shadow: 0 4px 12px rgba(0,157,247,0.15); /* Soft blue shadow */
+}
+
+/* Make Instagram icon a little bit smaller but still consistent */
+.icon-instagram {
+  width: 34px;
+  height: 34px;
+}
+
+/* Logo in the bottom left corner */
+.logo-bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 130px; /* Make the logo a bit bigger */
+  height: auto;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 900px) {
+  .main-content {
+    max-width: 90%;
+    margin-top: 30px;
+    padding: 16px;
+  }
+  .footer {
+    width: 90%;
+    right: 5%;
+    left: 5%;
+    bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-wrapper {
+    padding: 10px;
+  }
+
+  .main-content {
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p,
+  .subscribe-subtext {
+    font-size: 13px;
+  }
+
+  .cta-button {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 8px;
+  }
+
+  .email-form input {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .email-form button {
+    font-size: 14px;
+    padding: 8px 10px;
+    min-width: 70px;
+  }
+
+  .footer {
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    width: auto;
+  }
+
+  .logo-bottom-left {
+    width: 70px;
+    bottom: 10px;
+    left: 10px;
+    top: auto;
+    right: auto;
+  }
+
+  .social-icons img,
+  .icon-instagram {
+    width: 28px;
+    height: 28px;
+  }
+}
